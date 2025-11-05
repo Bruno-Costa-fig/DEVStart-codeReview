@@ -1,34 +1,64 @@
-/* CSS PARA REVISAR */
-body div .perfil-card {
-  padding: 15px;
+/* CSS CORRIGIDO */
+:root {
+  --cor-primaria: #007bff;
+  --cor-texto: #333;
+  --cor-branca: #FFF;
+  
+  --espacamento-sm: 8px;
+  --espacamento-md: 16px;
+  
+  --font-base: 1rem; /* 16px */
+  --font-titulo: 1.25rem;
+}
+
+/* Classe utilitária para "botões" e "caixas" */
+.ui-box {
+  padding: var(--espacamento-md);
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
+  border-radius: 5px;
+  text-align: center;
+}
+
+/* Nomenclatura BEM */
+.perfil-card {
+  padding: var(--espacamento-md);
   border: 1px solid #ccc;
   width: 300px;
 }
 
-.titulo {
-  font-size: 1.2em;
+.perfil-card__nome {
+  font-size: var(--font-titulo);
   font-weight: bold;
-  color: #333 !important; /* Problema! */
+  color: var(--cor-texto); /* Sem !important */
 }
 
-.descricao {
-  font-size: 14px; /* Unidade fixa */
-  margin-top: 7px; /* Número Mágico */
+.perfil-card__descricao {
+  font-size: var(--font-base);
+  margin-top: var(--espacamento-sm);
 }
 
-.botao {
-  background: #007bff;
-  color: #FFF;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
+.perfil-card__botao {
+  display: block;
+  text-decoration: none;
   cursor: pointer;
 }
 
-/* Outro componente */
+/* Reutilizando a classe utilitária */
 .box-sidebar {
-  padding: 10px;
-  background: #007bff;
-  color: #FFF;
+  padding: var(--espacamento-md);
+  background: var(--cor-primaria);
+  color: var(--cor-branca);
   border-radius: 5px;
 }
+
+/* Aplicando DRY */
+.perfil-card__botao {
+  /* Estilos específicos do link */
+  display: block;
+  text-decoration: none;
+}
+
+/* Combinando com a classe utilitária no HTML:
+   <a class="perfil-card__botao ui-box" ...> 
+*/
