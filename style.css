@@ -1,0 +1,34 @@
+/* CSS PARA REVISAR */
+body div .perfil-card {
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+.titulo {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333 !important; /* Problema! */
+}
+
+.descricao {
+  font-size: 14px; /* Unidade fixa */
+  margin-top: 7px; /* Número Mágico */
+}
+
+.botao {
+  background: #007bff;
+  color: #FFF;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Outro componente */
+.box-sidebar {
+  padding: 10px;
+  background: #007bff;
+  color: #FFF;
+  border-radius: 5px;
+}
